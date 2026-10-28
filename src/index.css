@@ -110,9 +110,9 @@ img {
 
 .wrap {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 clamp(1.5rem, 4vw, 5rem);
+  padding: 0 clamp(1.5rem, 4vw, 3.5rem);
   box-sizing: border-box;
 }
 /* ===== NAV ===== */
@@ -847,11 +847,11 @@ body.dark-theme .mobile-menu-links a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto 32px;
+  margin: 0 0 32px 0;
   flex-wrap: wrap;
   gap: 16px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 100%;
 }
 
 .tabs {
@@ -915,10 +915,9 @@ body.dark-theme .mobile-menu-links a {
   grid-template-columns: 1fr;
   gap: 24px;
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
   box-sizing: border-box;
-  /* allow overflow for hover preview to escape the grid */
   overflow: visible;
 }
 
@@ -1058,7 +1057,8 @@ body.dark-theme .mobile-menu-links a {
 /* pw-grid: same as projects-grid but with overflow visible for preview */
 .pw-grid {
   overflow: visible;
-  max-width: 1080px; /* ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬Ëœ Larger grid = larger cards */
+  max-width: 100%;
+  width: 100%;
   gap: 20px;
 }
 

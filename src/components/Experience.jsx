@@ -81,6 +81,7 @@ export default function Experience() {
 
   return (
     <section className="timeline-section section" id="experience" ref={sectionRef}>
+      <div className="wrap">
       <div style={{ position: 'relative', width: '100%', marginBottom: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div className="ghost-label" style={{ top: '50%', transform: 'translateY(-50%)', margin: 0 }}>EXPERIENCE</div>
         <h2 
@@ -174,6 +175,7 @@ export default function Experience() {
           </div>
         </div>
 
+      </div>
       </div>
     </section>
   );

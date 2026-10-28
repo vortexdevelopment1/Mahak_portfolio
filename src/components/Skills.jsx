@@ -96,6 +96,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="skills-section section" ref={sectionRef}>
+      <div className="wrap">
       <div style={{ position: 'relative', width: '100%', marginBottom: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div className="ghost-label" style={{ top: '50%', transform: 'translateY(-50%)', margin: 0 }}>SKILLS</div>
         <h2 
@@ -144,6 +145,7 @@ export default function Skills() {
             </div>
           );
         })}
+      </div>
       </div>
     </section>
   );
