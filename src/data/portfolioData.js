@@ -83,7 +83,7 @@ export const PORTFOLIO_PROJECTS = [
     category: 'Real Project',
     tagBadge: 'REAL PROJECT',
     thumbClass: 'art-fioner',
-    image: '/images/fioner-app.png',
+    image: '/images/fioner.jpeg',
     tags: ['Mobile App', 'Vehicle IoT', 'Next.js'],
     description: 'A connected vehicle platform with real-time GPS tracking, QR vehicle safety, voice trip planning, and emergency SOS services.',
     liveUrl: '#',
