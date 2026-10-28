@@ -75,7 +75,7 @@ export const PORTFOLIO_PROJECTS = [
     image: '/images/mens-salon.png',
     tags: ['Landing Page', 'Booking'],
     description: 'A modern landing page and integrated booking system tailored for a premium men\'s salon.',
-    liveUrl: 'https://mens-salon-demo-five.vercel.app/',
+
   },
   {
     id: 8,
@@ -86,7 +86,7 @@ export const PORTFOLIO_PROJECTS = [
     image: '/images/fionerApp.png',
     tags: ['Mobile App'],
     description: 'A connected vehicle platform with real-time GPS tracking, QR vehicle safety, voice trip planning, and emergency SOS services.',
-    liveUrl: '#',
+
   },
 ];
 
