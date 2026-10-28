@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { NAV_LINKS } from '../data/portfolioData';
 
@@ -10,6 +10,37 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+  const menuBtnRef = useRef(null);
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const handleClickOutside = (e) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(e.target) &&
+        menuBtnRef.current &&
+        !menuBtnRef.current.contains(e.target)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setIsMenuOpen(false);
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isMenuOpen]);
 
   useEffect(() => {
     if (isDark) {
@@ -93,6 +124,7 @@ export default function Navbar() {
           </a>
 
           <button 
+            ref={menuBtnRef}
             className="mobile-menu-btn"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Menu"
@@ -106,34 +138,40 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Backdrop & Overlay */}
       {isMenuOpen && (
-        <div className="mobile-menu-overlay">
-          <div className="mobile-menu-links">
-            {NAV_LINKS.map((link) => (
+        <>
+          <div
+            className="mobile-menu-backdrop"
+            onClick={() => setIsMenuOpen(false)}
+          />
+          <div className="mobile-menu-overlay" ref={menuRef}>
+            <div className="mobile-menu-links">
+              {NAV_LINKS.map((link) => (
+                <a
+                  key={link.label}
+                  href={'/' + link.href}
+                  onClick={(e) => {
+                    setIsMenuOpen(false);
+                    handleScrollTo(e, link.href);
+                  }}
+                >
+                  {link.label}
+                </a>
+              ))}
               <a
-                key={link.label}
-                href={'/' + link.href}
+                href="/#contact"
                 onClick={(e) => {
                   setIsMenuOpen(false);
-                  handleScrollTo(e, link.href);
+                  handleScrollTo(e, '#contact');
                 }}
+                style={{ fontWeight: 700, color: 'var(--accent-green)' }}
               >
-                {link.label}
+                Let's Talk
               </a>
-            ))}
-            <a
-              href="/#contact"
-              onClick={(e) => {
-                setIsMenuOpen(false);
-                handleScrollTo(e, '#contact');
-              }}
-              style={{ fontWeight: 700, color: 'var(--accent-green)' }}
-            >
-              Let's Talk
-            </a>
+            </div>
           </div>
-        </div>
+        </>
       )}
     </nav>
   );
