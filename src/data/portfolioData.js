@@ -68,13 +68,13 @@ export const PORTFOLIO_PROJECTS = [
   },
   {
     id: 7,
-    title: "Men's Salon Booking",
+    title: 'ACTIV — Sports & Wellbeing App',
     category: 'Real Project',
     tagBadge: 'REAL PROJECT',
-    thumbClass: 'art-salon',
-    image: '/images/mens-salon.png',
-    tags: ['Landing Page', 'Booking'],
-    description: 'A modern landing page and integrated booking system tailored for a premium men\'s salon.',
+    thumbClass: 'art-activ',
+    image: '/images/activ-app.png',
+    tags: ['Mobile App'],
+    description: "India's sports and wellbeing platform for booking live turfs, courts, gyms, and wellness venues with instant pay-per-session access.",
 
   },
   {
