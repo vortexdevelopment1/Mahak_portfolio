@@ -24,8 +24,8 @@ function Home() {
 
   return (
     <div className="page-wrapper">
+      <Navbar />
       <div className="portfolio-card">
-        <Navbar />
         <Hero />
         <Portfolio />
         <Services />

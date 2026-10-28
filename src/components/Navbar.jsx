@@ -40,9 +40,9 @@ export default function Navbar() {
   return (
     <nav>
       <div className="nav-inner">
-
-
-
+        <span className="status-pill">
+          <span className="dot"></span> Available for New Project
+        </span>
         <div className="nav-links">
           {NAV_LINKS.map((link) => (
             <a

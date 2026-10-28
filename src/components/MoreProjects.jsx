@@ -53,9 +53,7 @@ export default function MoreProjects() {
 
   return (
     <div className="page-wrapper">
-      <div className="portfolio-card" style={{ paddingBottom: '0' }}>
-        <Navbar />
-      </div>
+      <Navbar />
 
       <section className="section" style={{ minHeight: '80vh', paddingTop: '2rem' }}>
         <div className="wrap">
