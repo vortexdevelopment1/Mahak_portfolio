@@ -40,7 +40,13 @@ function CenterPreview({ project }) {
       {/* Left: large project thumbnail */}
       <div className="pw-preview-thumb">
         {project.image && (
-          <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '14px' }} />
+          <div className="pw-preview-img-wrap">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="pw-preview-img"
+            />
+          </div>
         )}
       </div>
 
@@ -197,7 +203,7 @@ export default function Portfolio() {
                 <div className="pw-glass-layer" />
                 <div className={`work-thumb ${project.thumbClass}`}>
                   {project.image && (
-                    <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }} />
                   )}
                 </div>
                 <div className="work-body">
