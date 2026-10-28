@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --bg: #ffffff;
   --bg-soft: #f4f4f2;
   --ink: #101010;
@@ -1106,25 +1106,18 @@ body.dark-theme .mobile-menu-links a {
   width: 100%;
   height: 100%;
   max-height: 380px;
+  aspect-ratio: 16/10;
   border-radius: 16px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(6, 10, 22, 0.45);
-  padding: 6px;
-  box-sizing: border-box;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
 }
 
 .pw-preview-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  border-radius: 12px;
+  object-fit: cover;
   display: block;
 }
-
 .pw-preview-badge {
   position: static;
   font-size: 11px;

@@ -206,7 +206,7 @@ export default function Portfolio() {
                 <div className="pw-glass-layer" />
                 <div className={`work-thumb ${project.thumbClass}`}>
                   {project.image && (
-                    <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                    <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   )}
                 </div>
                 <div className="work-body">
