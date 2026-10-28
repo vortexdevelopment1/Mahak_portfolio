@@ -127,7 +127,7 @@ nav {
   background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  /* border-bottom removed */
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -136,7 +136,7 @@ nav {
 
 body.dark-theme nav {
   background: rgba(16, 16, 16, 0.94);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* border-bottom removed */
 }
 
 .nav-inner {
