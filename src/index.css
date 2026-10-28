@@ -141,9 +141,9 @@ body.dark-theme nav {
 
 .nav-inner {
   width: 100%;
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 clamp(1.5rem, 4vw, 5rem);
+  padding: 0 clamp(2rem, 4vw, 5rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -337,9 +337,9 @@ body.dark-theme .mobile-menu-links a {
 .hero-section {
   position: relative;
   width: 100%;
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 clamp(1.5rem, 4vw, 5rem);
+  padding: 0 clamp(2rem, 4vw, 5rem);
   box-sizing: border-box;
   container-type: inline-size;
   height: calc(100vh - var(--nav-h));
@@ -404,10 +404,8 @@ body.dark-theme .mobile-menu-links a {
 
 @media(min-width: 768px) {
   .hero-grid {
-    /* 4 | 4 | 4 column split */
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-columns: minmax(260px, 1fr) minmax(360px, 1.5fr) minmax(180px, 0.85fr);
     gap: 2rem;
-    /* Image extends to bottom ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â align everything to bottom of image */
     align-items: flex-end;
   }
 }
@@ -424,8 +422,8 @@ body.dark-theme .mobile-menu-links a {
 @media(min-width: 768px) {
   .hero-left {
     order: 1;
-    grid-column: span 4 / span 4;
-    align-self: center;   /* Vertically align with image mid-point */
+    grid-column: auto;
+    align-self: center;
     padding-bottom: 0;
     padding-left: 0;
   }
@@ -435,7 +433,7 @@ body.dark-theme .mobile-menu-links a {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  max-width: clamp(220px, 22vw, 300px);
+  max-width: clamp(260px, 24vw, 360px);
 }
 
 @media(max-width: 640px) {
@@ -555,7 +553,7 @@ body.dark-theme .mobile-menu-links a {
 @media(min-width: 768px) {
   .hero-center {
     order: 2;
-    grid-column: span 4 / span 4;
+    grid-column: auto;
     align-self: flex-end;
   }
 }
@@ -570,16 +568,16 @@ body.dark-theme .mobile-menu-links a {
 }
 
 @media(min-width: 640px) { .avatar { max-width: 400px; } }
-@media(min-width: 768px) { .avatar { max-width: 100%; transform: scale(1.05); transform-origin: bottom center; } }
+@media(min-width: 768px) { .avatar { max-width: 480px; transform: scale(1.15); transform-origin: bottom center; } }
 
 .avatar-base, .avatar-reveal {
   width: 100%;
   height: auto;
-  max-height: clamp(375px, 68vh, 675px);
+  max-height: clamp(460px, 72vh, 760px);
   object-fit: contain;
   object-position: bottom;
   display: block;
-  padding-bottom: 28px;
+  padding-bottom: 0;
 }
 
 .avatar-reveal {
@@ -606,8 +604,9 @@ body.dark-theme .mobile-menu-links a {
 
 @media(min-width: 768px) {
   .hero-right {
-    grid-column: span 4 / span 4;
-    align-self: center;   /* Mirror the left ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â vertically centered with image */
+    order: 3;
+    grid-column: auto;
+    align-self: center;
     align-items: flex-end;
     padding-right: 0;
   }
