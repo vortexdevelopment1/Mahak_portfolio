@@ -669,6 +669,116 @@ body.dark-theme .mobile-menu-links a {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.07);
 }
 
+
+/* ===== TABLET RESPONSIVE HERO (iPad Mini, iPad Air, Tablets: 641px - 1024px) ===== */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero-section {
+    height: calc(100vh - var(--nav-h));
+    min-height: 680px;
+    padding: 0 clamp(1.5rem, 3.5vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .headline {
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: clamp(2.6rem, 7vw, 4.8rem);
+    flex-shrink: 0;
+  }
+
+  .hero-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) minmax(280px, 1.35fr) minmax(150px, 0.85fr);
+    gap: 1.25rem;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 0;
+  }
+
+  .hero-left {
+    order: 1;
+    grid-column: auto;
+    align-self: flex-end;
+    padding-bottom: clamp(2.5rem, 6vh, 4.5rem);
+    padding-left: 0;
+    z-index: 5;
+  }
+
+  .hero-left-content {
+    max-width: 100%;
+    gap: 0.75rem;
+  }
+
+  .hero-left h2 {
+    font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+    line-height: 1.35;
+  }
+
+  .hero-left p {
+    font-size: clamp(0.8rem, 1.25vw, 0.92rem);
+    line-height: 1.55;
+    color: #666;
+  }
+
+  .hero-cta {
+    height: 42px;
+    padding: 0 1.25rem;
+    font-size: 13px;
+    margin-top: 0.5rem;
+  }
+
+  .hero-center {
+    order: 2;
+    grid-column: auto;
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 2;
+  }
+
+  .avatar {
+    width: 100%;
+    max-width: 380px;
+    transform: scale(1.08);
+    transform-origin: bottom center;
+  }
+
+  .avatar-base,
+  .avatar-reveal {
+    width: 100%;
+    height: auto;
+    max-height: clamp(420px, 52vh, 600px);
+    object-fit: contain;
+    object-position: bottom;
+    padding-bottom: 12px;
+  }
+
+  .hero-right {
+    order: 3;
+    grid-column: auto;
+    align-self: flex-end;
+    align-items: flex-end;
+    padding-bottom: clamp(2.5rem, 6vh, 4.5rem);
+    padding-right: 0;
+    z-index: 5;
+  }
+
+  .social-col {
+    gap: 0.65rem;
+  }
+
+  .social-pill {
+    padding: 0.65rem 1.25rem;
+    width: 135px;
+    font-size: 0.85rem;
+  }
+}
+
 /* ===== SECTION LABELS ===== */
 .section {
   padding: 4rem 0 2rem;
