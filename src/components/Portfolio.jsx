@@ -19,6 +19,7 @@ const THUMB_GRADIENTS = {
   'art-warehouse': 'linear-gradient(160deg, #4d3a1f 0%, #261b0b 100%)',
   'art-salon':  'linear-gradient(160deg, #3d1f4d 0%, #1e0b26 100%)',
   'art-chartmind': 'linear-gradient(160deg, #1d334a 0%, #0d1822 100%)',
+  'art-fioner':    'linear-gradient(160deg, #0b1f3a 0%, #06101e 100%)',
 };
 
 /* ─────────────────────────────────────────────────────────────

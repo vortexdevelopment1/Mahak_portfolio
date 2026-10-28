@@ -894,6 +894,10 @@ body.dark-theme .mobile-menu-links a {
   background: linear-gradient(160deg, #3d1f4d 0%, #1e0b26 100%);
 }
 
+.art-fioner {
+  background: linear-gradient(160deg, #0b1f3a 0%, #06101e 100%);
+}
+
 .art-chartmind {
   background: linear-gradient(160deg, #1d334a 0%, #0d1822 100%);
 }

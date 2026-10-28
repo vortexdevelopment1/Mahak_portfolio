@@ -79,14 +79,14 @@ export const PORTFOLIO_PROJECTS = [
   },
   {
     id: 8,
-    title: 'ChartMind AI',
+    title: 'Fioner — Vehicle Intelligence App',
     category: 'Real Project',
     tagBadge: 'REAL PROJECT',
-    thumbClass: 'art-chartmind',
-    image: '/images/chartmind-ai.png',
-    tags: ['AI', 'Data Visualization'],
-    description: 'An AI-powered tool for creating and analyzing charts intuitively.',
-    liveUrl: 'https://chartmindai-new.vercel.app/',
+    thumbClass: 'art-fioner',
+    image: '/images/fioner-app.png',
+    tags: ['Mobile App', 'Vehicle IoT', 'Next.js'],
+    description: 'A connected vehicle platform with real-time GPS tracking, QR vehicle safety, voice trip planning, and emergency SOS services.',
+    liveUrl: '#',
   },
 ];
 
