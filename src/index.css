@@ -117,19 +117,29 @@ img {
 }
 /* ===== NAV ===== */
 nav {
-  position: relative;
-  z-index: 50;
-  background: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+body.dark-theme nav {
+  background: rgba(16, 16, 16, 0.94);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-inner {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0.5rem clamp(1.5rem, 4vw, 5rem) 1.5rem;
+  padding: 1rem clamp(1.5rem, 4vw, 5rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -138,7 +148,7 @@ nav {
 }
 
 @media(min-width: 640px) {
-  .nav-inner { padding-bottom: 2rem; }
+  .nav-inner { padding: 1.1rem clamp(1.5rem, 4vw, 5rem); }
 }
 
 .status-pill {
@@ -1014,7 +1024,8 @@ body.dark-theme .mobile-menu-links a {
 .pw-card-desc {
   margin: 4px 0 12px 0;
   font-size: 14px;
-  color: #6b6b6b;
+  color: #2b2b2b;
+  font-weight: 500;
   line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -1033,10 +1044,10 @@ body.dark-theme .mobile-menu-links a {
 /* Individual Pill Tags */
 .pw-card .tag {
   font-size: 13px;
-  font-weight: 500;
-  color: #4a4a4a;
-  background: transparent;
-  border: 1px solid #e5e5e5;
+  font-weight: 600;
+  color: #111111;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.18);
   padding: 6px 14px;
   border-radius: 999px;
 }
@@ -1051,9 +1062,9 @@ body.dark-theme .mobile-menu-links a {
   width: 100vw;
   height: 100vh;
   z-index: 90;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(14px) brightness(0.9);
-  -webkit-backdrop-filter: blur(14px) brightness(0.9);
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(14px) brightness(0.85);
+  -webkit-backdrop-filter: blur(14px) brightness(0.85);
   pointer-events: auto;
 }
 
@@ -1078,7 +1089,7 @@ body.dark-theme .mobile-menu-links a {
   box-sizing: border-box;
   overflow: hidden;
   border-radius: 28px;
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(28px) saturate(1.7);
   -webkit-backdrop-filter: blur(28px) saturate(1.7);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -1137,17 +1148,18 @@ body.dark-theme .mobile-menu-links a {
 
 .pw-preview-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.6rem;    /* ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬Ëœ Larger title */
-  font-weight: 700;
-  color: #171717;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #000000;
   margin: 0;
   line-height: 1.35;
   letter-spacing: -0.025em;
 }
 
 .pw-preview-desc {
-  font-size: 1rem;      /* ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬Ëœ Slightly larger body text */
-  color: #444;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #222222;
   line-height: 1.65;
   margin: 0;
   display: -webkit-box;
@@ -1542,15 +1554,29 @@ body.dark-theme .pw-card {
   border: 1px solid #333;
 }
 body.dark-theme .pw-preview-card {
-  background: rgba(30, 30, 30, 0.4);
+  background: rgba(22, 22, 22, 0.96);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 40px 100px rgba(0,0,0,0.8);
 }
 body.dark-theme .pw-preview-title {
-  color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #000000;
+  margin: 0;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
 }
 body.dark-theme .pw-preview-desc {
-  color: #bbb;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #222222;
+  line-height: 1.65;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 body.dark-theme .tag {
   color: #d0d0d0;
@@ -1707,11 +1733,25 @@ body.dark-theme .status-pill {
     gap: 12px;
   }
   .pw-preview-title {
-    font-size: 1.4rem;
-  }
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #000000;
+  margin: 0;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+}
   .pw-preview-desc {
-    -webkit-line-clamp: unset;
-  }
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #222222;
+  line-height: 1.65;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 }
 
 @media(max-width: 640px) {

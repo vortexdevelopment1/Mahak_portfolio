@@ -40,7 +40,7 @@ export default function Contact() {
           
           {/* Left Column */}
           <div className="contact-left">
-            <h2 className="display contact-anim">Let's Work<br/>Together <span style={{color: 'var(--accent-green)'}}>✦</span></h2>
+            <h2 className="display contact-anim">Let's Work<br/>Together</h2>
             <p className="contact-anim">
               I'm always open to discussing new opportunities, exciting projects, or just having a friendly conversation about technology and ideas.
             </p>
