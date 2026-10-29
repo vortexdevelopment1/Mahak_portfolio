@@ -72,7 +72,7 @@ export const PORTFOLIO_PROJECTS = [
     category: 'Real Project',
     tagBadge: 'REAL PROJECT',
     thumbClass: 'art-activ',
-    image: 'https://res.cloudinary.com/l44x18ko/image/upload/activ-app.png',
+    image: 'https://res.cloudinary.com/l44x18ko/image/upload/v1793252102/activ-banner.png',
     tags: ['Mobile App'],
     description: "India's sports and wellbeing platform for booking live turfs, courts, gyms, and wellness venues with instant pay-per-session access.",
 
@@ -83,7 +83,7 @@ export const PORTFOLIO_PROJECTS = [
     category: 'Real Project',
     tagBadge: 'REAL PROJECT',
     thumbClass: 'art-fioner',
-    image: 'https://res.cloudinary.com/l44x18ko/image/upload/fionerApp.png',
+    image: 'https://res.cloudinary.com/l44x18ko/image/upload/v1793252102/fioner-banner.png',
     tags: ['Mobile App'],
     description: 'A connected vehicle platform with real-time GPS tracking, QR vehicle safety, voice trip planning, and emergency SOS services.',
 
