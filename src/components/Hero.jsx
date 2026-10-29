@@ -38,20 +38,28 @@ export default function Hero() {
   const [mousePos, setMousePos] = useState({ x: 50, y: 50 });
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
+  const updatePosition = (clientX, clientY, target) => {
+    const rect = target.getBoundingClientRect();
+    const x = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
+    const y = Math.max(0, Math.min(100, ((clientY - rect.top) / rect.height) * 100));
     setMousePos({ x, y });
   };
 
+  const handleMouseMove = (e) => {
+    updatePosition(e.clientX, e.clientY, e.currentTarget);
+  };
+
+  const handleTouchStart = (e) => {
+    setIsHovered(true);
+    if (e.touches && e.touches.length > 0) {
+      updatePosition(e.touches[0].clientX, e.touches[0].clientY, e.currentTarget);
+    }
+  };
+
   const handleTouchMove = (e) => {
-    if (!e.touches || e.touches.length === 0) return;
-    const touch = e.touches[0];
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = ((touch.clientX - rect.left) / rect.width) * 100;
-    const y = ((touch.clientY - rect.top) / rect.height) * 100;
-    setMousePos({ x, y });
+    if (e.touches && e.touches.length > 0) {
+      updatePosition(e.touches[0].clientX, e.touches[0].clientY, e.currentTarget);
+    }
   };
 
   const handleScrollToContact = (e) => {
@@ -156,21 +164,23 @@ export default function Hero() {
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            onTouchStart={() => setIsHovered(true)}
+            onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={() => setIsHovered(false)}
+            onTouchCancel={() => setIsHovered(false)}
           >
-            <img src={heroImg} alt="Mahak Sarla Base" className="avatar-base" />
+            <img src={heroImg} alt="Mahak Sarla Base" className="avatar-base" draggable="false" />
             <img 
               src={heroImg} 
               alt="Mahak Sarla Color Reveal" 
               className="avatar-reveal"
+              draggable="false"
               style={{
                 WebkitMaskImage: isHovered 
-                  ? `radial-gradient(circle 160px at ${mousePos.x}% ${mousePos.y}%, black 20%, transparent 80%)`
+                  ? `radial-gradient(circle var(--spotlight-radius, 150px) at ${mousePos.x}% ${mousePos.y}%, black 25%, transparent 75%)`
                   : 'radial-gradient(circle 0px at 50% 50%, black 0%, transparent 0%)',
                 maskImage: isHovered 
-                  ? `radial-gradient(circle 160px at ${mousePos.x}% ${mousePos.y}%, black 20%, transparent 80%)`
+                  ? `radial-gradient(circle var(--spotlight-radius, 150px) at ${mousePos.x}% ${mousePos.y}%, black 25%, transparent 75%)`
                   : 'radial-gradient(circle 0px at 50% 50%, black 0%, transparent 0%)',
                 transition: isHovered ? 'none' : 'mask-image 0.4s ease, -webkit-mask-image 0.4s ease',
               }}

@@ -565,10 +565,26 @@ body.dark-theme .mobile-menu-links a {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  touch-action: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+  --spotlight-radius: 90px;
 }
 
-@media(min-width: 640px) { .avatar { max-width: 400px; } }
-@media(min-width: 768px) { .avatar { max-width: 480px; transform: scale(1.15); transform-origin: bottom center; } }
+@media(min-width: 640px) { 
+  .avatar { 
+    max-width: 400px; 
+    --spotlight-radius: 125px;
+  } 
+}
+@media(min-width: 768px) { 
+  .avatar { 
+    max-width: 480px; 
+    transform: scale(1.15); 
+    transform-origin: bottom center; 
+    --spotlight-radius: 160px;
+  } 
+}
 
 .avatar-base, .avatar-reveal {
   width: 100%;
