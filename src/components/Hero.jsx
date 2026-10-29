@@ -45,6 +45,15 @@ export default function Hero() {
     setMousePos({ x, y });
   };
 
+  const handleTouchMove = (e) => {
+    if (!e.touches || e.touches.length === 0) return;
+    const touch = e.touches[0];
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((touch.clientX - rect.left) / rect.width) * 100;
+    const y = ((touch.clientY - rect.top) / rect.height) * 100;
+    setMousePos({ x, y });
+  };
+
   const handleScrollToContact = (e) => {
     e.preventDefault();
     const el = document.getElementById('contact');
@@ -147,6 +156,9 @@ export default function Hero() {
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            onTouchStart={() => setIsHovered(true)}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={() => setIsHovered(false)}
           >
             <img src={heroImg} alt="Mahak Sarla Base" className="avatar-base" />
             <img 

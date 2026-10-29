@@ -12,7 +12,7 @@ const THUMB_GRADIENTS = {
   'art-spenso': 'linear-gradient(160deg, #0e2620 0%, #061412 100%)',
 };
 
-function CenterPreview({ project }) {
+function CenterPreview({ project, onClose }) {
   const gradient = THUMB_GRADIENTS[project.thumbClass] || '#111';
   return (
     <motion.div
@@ -23,6 +23,21 @@ function CenterPreview({ project }) {
       exit={{    opacity: 0, scale: 0.85 }}
       transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
     >
+      {onClose && (
+        <button
+          className="pw-preview-close-btn"
+          onClick={(e) => {
+            e.stopPropagation();
+            onClose();
+          }}
+          aria-label="Close Preview"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      )}
       <div className="pw-preview-thumb">
         {project.image && (
           <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '14px' }} />
@@ -111,7 +126,7 @@ export default function MoreProjects() {
             <div className="pw-preview-positioner">
               <AnimatePresence>
                 {hoveredProject && (
-                  <CenterPreview key={hoveredProject.id} project={hoveredProject} />
+                  <CenterPreview key={hoveredProject.id} project={hoveredProject} onClose={() => setHoveredProject(null)} />
                 )}
               </AnimatePresence>
             </div>
