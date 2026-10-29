@@ -1058,6 +1058,10 @@ body.dark-theme .mobile-menu-links a {
   background: linear-gradient(160deg, #0b1f3a 0%, #06101e 100%);
 }
 
+.art-crm {
+  background: linear-gradient(160deg, #101c2c 0%, #070d14 100%);
+}
+
 .art-chartmind {
   background: linear-gradient(160deg, #1d334a 0%, #0d1822 100%);
 }
@@ -1683,19 +1687,27 @@ body.dark-theme .contact-section p {
   color: #b8b8b8;
 }
 
-body.dark-theme .hero-cta {
-  background-color: #ffffff;
-  color: #121212;
-  border-color: #ffffff;
+body.dark-theme .hero-cta,
+body.dark-theme a.hero-cta,
+body.dark-theme .hero-cta span {
+  background-color: #ffffff !important;
+  color: #121212 !important;
+  border-color: #ffffff !important;
 }
 
-body.dark-theme .hero-cta:hover {
-  background-color: #e5e5e5;
-  color: #000000;
+body.dark-theme .hero-cta:hover,
+body.dark-theme a.hero-cta:hover,
+body.dark-theme .hero-cta:hover span {
+  background-color: #e5e5e5 !important;
+  color: #000000 !important;
 }
 
 body.dark-theme .hero-cta .cta-arrow {
-  stroke: #121212;
+  stroke: #121212 !important;
+}
+
+body.dark-theme .hero-cta:hover .cta-arrow {
+  stroke: #000000 !important;
 }
 
 body.dark-theme .status-pill,

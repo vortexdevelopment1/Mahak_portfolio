@@ -10,6 +10,7 @@ const THUMB_GRADIENTS = {
   'art-frag':   'linear-gradient(160deg, #2b2b2b 0%, #0e0e0e 60%)',
   'art-crypto': 'linear-gradient(160deg, #151515 0%, #060606 100%)',
   'art-spenso': 'linear-gradient(160deg, #0e2620 0%, #061412 100%)',
+  'art-crm':    'linear-gradient(160deg, #101c2c 0%, #070d14 100%)',
 };
 
 function CenterPreview({ project, onClose }) {

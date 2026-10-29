@@ -146,7 +146,7 @@ export default function Hero() {
                 </motion.p>
               </AnimatePresence>
             </div>
-            <a href="#contact" className="pill-outline hero-cta" onClick={handleScrollToContact}>
+            <a href="#contact" className="hero-cta" onClick={handleScrollToContact}>
               <span>Let's collaborate</span>
               <svg
                 className="cta-arrow"

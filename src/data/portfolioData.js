@@ -72,7 +72,7 @@ export const PORTFOLIO_PROJECTS = [
     category: 'Real Project',
     tagBadge: 'REAL PROJECT',
     thumbClass: 'art-activ',
-    image: 'https://res.cloudinary.com/l44x18ko/image/upload/v1793252102/activ-banner.png',
+    image: 'https://res.cloudinary.com/l44x18ko/image/upload/b_auto,c_pad,ar_16:10/v1793252102/activ-app.png',
     tags: ['Mobile App'],
     description: "India's sports and wellbeing platform for booking live turfs, courts, gyms, and wellness venues with instant pay-per-session access.",
 
@@ -179,13 +179,13 @@ export const EXPERIENCE_DATA = [
 export const MORE_PROJECTS = [
   {
     id: 9,
-    title: 'Tourism Experience Platform',
+    title: 'Vortex Project & Team Workspace',
     category: 'Real Project',
-    thumbClass: 'art-bloom',
-    image: 'https://res.cloudinary.com/l44x18ko/image/upload/visitdubai.png',
-    tags: ['Travel', 'React', 'API'],
-    description: 'Official smart city guide with interactive maps and personalized trip planning.',
-    liveUrl: 'https://www.visitdubai.com/en/',
+    thumbClass: 'art-crm',
+    image: 'https://res.cloudinary.com/l44x18ko/image/upload/c_crop,w_1420,h_700,x_0,y_0/b_auto,c_pad,ar_16:10/vortex-crm.jpeg',
+    tags: ['Project Tracking', 'Employee Management', 'Operations'],
+    description: 'Internal company workspace designed to track project deliverables, manage employee workflows, and streamline team operations.',
+    liveUrl: '#',
   },
   {
     id: 100,
@@ -219,12 +219,12 @@ export const MORE_PROJECTS = [
   },
   {
     id: 103,
-    title: 'Vortex Cubes CRM',
+    title: 'Tourism Experience Platform',
     category: 'Real Project',
-    thumbClass: 'art-spenso',
-    image: 'https://res.cloudinary.com/l44x18ko/image/upload/vortex-crm.jpeg',
-    tags: ['CRM', 'Enterprise', 'Full Stack'],
-    description: 'Comprehensive enterprise CRM system for customer relationship management, sales pipeline, and business automation.',
-    liveUrl: '#',
+    thumbClass: 'art-bloom',
+    image: 'https://res.cloudinary.com/l44x18ko/image/upload/visitdubai.png',
+    tags: ['Travel', 'React', 'API'],
+    description: 'Official smart city guide with interactive maps and personalized trip planning.',
+    liveUrl: 'https://www.visitdubai.com/en/',
   },
 ];
