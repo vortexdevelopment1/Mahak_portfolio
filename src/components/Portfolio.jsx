@@ -7,7 +7,7 @@ import { PORTFOLIO_PROJECTS } from '../data/portfolioData';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const TABS = ['All', 'Real Project', 'Exploration'];
+const TABS = ['All', 'Real Project'];
 
 /* Gradient map mirrors CSS art-* classes — used in preview thumbnail */
 const THUMB_GRADIENTS = {
