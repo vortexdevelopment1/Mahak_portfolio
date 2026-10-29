@@ -912,16 +912,17 @@ body.dark-theme .mobile-menu-links a {
 
 @media(max-width: 640px) {
   .work-tabs {
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
   }
   .tabs {
-    width: 100%;
-    justify-content: center;
+    width: auto;
+    justify-content: flex-start;
   }
   .view-all {
-    margin: 0 auto;
+    margin: 0;
   }
 }
 

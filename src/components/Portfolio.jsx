@@ -7,8 +7,6 @@ import { PORTFOLIO_PROJECTS } from '../data/portfolioData';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const TABS = ['All', 'Real Project'];
-
 /* Gradient map mirrors CSS art-* classes — used in preview thumbnail */
 const THUMB_GRADIENTS = {
   'art-bloom':  'radial-gradient(circle at 50% 40%, #ff2fb0 0%, #4a0a3a 45%, #0c0212 100%)',
@@ -92,7 +90,6 @@ function CenterPreview({ project, onClose }) {
    MAIN PORTFOLIO SECTION
 ───────────────────────────────────────────────────────────── */
 export default function Portfolio() {
-  const [activeTab,      setActiveTab]      = useState('All');
   const [hoveredProject, setHoveredProject] = useState(null);
 
   /* refs for GSAP */
@@ -101,10 +98,7 @@ export default function Portfolio() {
   const gridRef     = useRef(null);
   const gsapCtxRef  = useRef(null);
 
-  const filteredProjects =
-    activeTab === 'All'
-      ? PORTFOLIO_PROJECTS
-      : PORTFOLIO_PROJECTS.filter(p => p.category === activeTab);
+  const filteredProjects = PORTFOLIO_PROJECTS;
 
   /* ── GSAP scroll animations ── */
   useEffect(() => {
@@ -176,15 +170,7 @@ export default function Portfolio() {
         {/* Tabs */}
         <div className="work-tabs">
           <div className="tabs">
-            {TABS.map(tab => (
-              <span
-                key={tab}
-                className={activeTab === tab ? 'active' : ''}
-                onClick={() => setActiveTab(tab)}
-              >
-                {tab}
-              </span>
-            ))}
+            <span className="active" style={{ cursor: 'default' }}>Projects</span>
           </div>
           <Link to="/more-projects" className="view-all" style={{ textDecoration: 'none' }}>
             View All Work
