@@ -356,7 +356,7 @@ body.dark-theme .mobile-menu-links a {
   font-family: 'Archivo', sans-serif;
   font-weight: 800;
   /* Responsive font: fits nicely at 1366-1920px, scales down gracefully on mobile */
-  font-size: clamp(2rem, 10vw, 14rem);
+  font-size: clamp(2rem, 7.5vw, 12rem);
   line-height: 1;
   letter-spacing: -0.02em;
   display: flex;
@@ -1893,12 +1893,20 @@ body.dark-theme .status-pill {
     padding: 20px 0;
   }
   
-  /* Make sure Headline does not overflow */
+  /* Mobile Headline responsive fit without cutting off */
+  .hero-section {
+    padding: 0 clamp(1rem, 3.5vw, 1.5rem);
+  }
   .headline {
-    font-size: clamp(3rem, 15vw, 14rem);
-    word-break: break-word;
+    font-size: clamp(1.4rem, 7.5vw, 2.35rem);
     white-space: nowrap;
     text-align: center;
+    gap: 0.2em;
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
   /* Prevent horizontal scroll */
