@@ -438,8 +438,8 @@ body.dark-theme .mobile-menu-links a {
 
 @media(max-width: 640px) {
   .hero-left-content {
-    max-width: 150px;
-    gap: 0.3rem;
+    max-width: 180px;
+    gap: 0.4rem;
   }
 }
 
@@ -462,8 +462,8 @@ body.dark-theme .mobile-menu-links a {
 }
 
 @media(max-width: 640px) {
-  .hero-left h2 { font-size: 0.9rem; }
-  .hero-left p { font-size: 0.65rem; line-height: 1.4; }
+  .hero-left h2 { font-size: 1.05rem; }
+  .hero-left p { font-size: 0.72rem; line-height: 1.45; }
 }
 
 .pill-outline {
@@ -1898,7 +1898,7 @@ body.dark-theme .status-pill {
     padding: 0 clamp(1rem, 3.5vw, 1.5rem);
   }
   .headline {
-    font-size: clamp(1.4rem, 7.5vw, 2.35rem);
+    font-size: clamp(1.75rem, 9.8vw, 2.85rem);
     white-space: nowrap;
     text-align: center;
     gap: 0.2em;
