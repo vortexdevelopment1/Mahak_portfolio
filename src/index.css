@@ -1646,6 +1646,11 @@ footer {
 
 /* ===== DARK THEME ===== */
 body.dark-theme {
+  --ink: #f0f0f0;
+  --ink-soft: #a3a3a3;
+  --line: rgba(255, 255, 255, 0.12);
+  --bg: #121212;
+  --card-bg: #1e1e1e;
   background-color: #121212;
   color: #f0f0f0;
 }
@@ -1665,7 +1670,32 @@ body.dark-theme h3 {
 
 body.dark-theme .ghost-label {
   color: #ffffff;
-  opacity: 0.03;
+  opacity: 0.04;
+}
+
+body.dark-theme .hero-left h2 {
+  color: #ffffff;
+}
+
+body.dark-theme .hero-left-content p,
+body.dark-theme .hero-left p,
+body.dark-theme .contact-section p {
+  color: #b8b8b8;
+}
+
+body.dark-theme .hero-cta {
+  background-color: #ffffff;
+  color: #121212;
+  border-color: #ffffff;
+}
+
+body.dark-theme .hero-cta:hover {
+  background-color: #e5e5e5;
+  color: #000000;
+}
+
+body.dark-theme .hero-cta .cta-arrow {
+  stroke: #121212;
 }
 
 body.dark-theme .status-pill,
@@ -1716,26 +1746,62 @@ body.dark-theme .service-item.open .service-icon svg path {
 
 /* Portfolio Dark Mode */
 body.dark-theme .pw-card {
-  border: 1px solid #333;
+  background: #1a1a1a;
+  border: 1px solid #2e2e2e;
 }
+
+body.dark-theme .pw-card .work-body h3,
+body.dark-theme .work-body h3 {
+  color: #ffffff;
+}
+
+body.dark-theme .pw-card .pw-card-desc,
+body.dark-theme .pw-card-desc {
+  color: #a8a8a8;
+}
+
+body.dark-theme .work-tabs .tabs span,
+body.dark-theme .work-tabs .tabs .active {
+  color: #ffffff;
+}
+
+body.dark-theme .pw-card:hover {
+  border-color: #444;
+}
+
+body.dark-theme .pw-card:hover .work-body h3 {
+  color: #ffffff;
+}
+
+body.dark-theme .pw-card:hover .pw-card-desc {
+  color: #d0d0d0;
+}
+
+body.dark-theme .pw-card:hover .tag {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
 body.dark-theme .pw-preview-card {
-  background: rgba(22, 22, 22, 0.96);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+  background: rgba(22, 22, 22, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 40px 100px rgba(0,0,0,0.85);
 }
+
 body.dark-theme .pw-preview-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.7rem;
   font-weight: 800;
-  color: #000000;
+  color: #ffffff !important;
   margin: 0;
   line-height: 1.35;
   letter-spacing: -0.025em;
 }
+
 body.dark-theme .pw-preview-desc {
   font-size: 1.05rem;
   font-weight: 500;
-  color: #222222;
+  color: #cccccc !important;
   line-height: 1.65;
   margin: 0;
   display: -webkit-box;
@@ -1743,30 +1809,21 @@ body.dark-theme .pw-preview-desc {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
 body.dark-theme .tag {
   color: #d0d0d0;
   border-color: #444;
 }
-body.dark-theme .pw-card-desc {
-  color: #ffffff;
-}
-body.dark-theme .pw-card:hover .pw-card-desc,
-body.dark-theme .pw-card:hover .work-body h3 {
-  color: #000000;
-}
-body.dark-theme .pw-card:hover .tag {
-  color: #000000;
-  border-color: #000000;
-}
 
 body.dark-theme .view-all {
-  background: #111;
-  border-color: #333;
-  color: #fff;
+  background: #1e1e1e;
+  border-color: #383838;
+  color: #ffffff;
 }
 body.dark-theme .view-all:hover {
-  background: #222;
-  border-color: #555;
+  background: #2a2a2a;
+  border-color: #666;
+  color: #ffffff;
 }
 
 /* Contact / Hero Dark Mode */
@@ -1777,10 +1834,6 @@ body.dark-theme .headline-sarla {
 body.dark-theme .headline-mahak.outline {
   -webkit-text-stroke: 1.5px #f0f0f0;
   color: transparent;
-}
-body.dark-theme .hero-left-content p,
-body.dark-theme .contact-section p {
-  color: #bbb;
 }
 body.dark-theme .pill-outline {
   color: #f0f0f0;
