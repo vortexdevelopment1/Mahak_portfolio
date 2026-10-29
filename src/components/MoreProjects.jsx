@@ -40,7 +40,13 @@ function CenterPreview({ project, onClose }) {
       )}
       <div className="pw-preview-thumb">
         {project.image && (
-          <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '14px' }} />
+          <div className="pw-preview-img-wrap">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="pw-preview-img"
+            />
+          </div>
         )}
       </div>
 
