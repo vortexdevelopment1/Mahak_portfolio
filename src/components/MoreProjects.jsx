@@ -50,14 +50,16 @@ function CenterPreview({ project, onClose }) {
         <div className="pw-preview-tags">
           {project.tags.map(t => <span key={t} className="tag">{t}</span>)}
         </div>
-        <a
-          href={project.liveUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="pw-preview-cta"
-        >
-          Live Project ↗
-        </a>
+        {project.liveUrl && project.liveUrl !== '#' && (
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pw-preview-cta"
+          >
+            Live Project ↗
+          </a>
+        )}
       </div>
     </motion.div>
   );
