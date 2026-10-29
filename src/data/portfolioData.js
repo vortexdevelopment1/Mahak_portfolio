@@ -182,7 +182,7 @@ export const MORE_PROJECTS = [
     title: 'Vortex Project & Team Workspace',
     category: 'Real Project',
     thumbClass: 'art-crm',
-    image: 'https://res.cloudinary.com/l44x18ko/image/upload/c_crop,w_1420,h_700,x_0,y_0/b_auto,c_pad,ar_16:10/vortex-crm.jpeg',
+    image: 'https://res.cloudinary.com/l44x18ko/image/upload/v1793252107/vortex-crm.jpg',
     tags: ['Project Tracking', 'Employee Management', 'Operations'],
     description: 'Internal company workspace designed to track project deliverables, manage employee workflows, and streamline team operations.',
     liveUrl: '#',

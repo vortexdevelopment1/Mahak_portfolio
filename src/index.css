@@ -2427,3 +2427,20 @@ body.dark-theme .exp-card {
   border-color: rgba(255, 255, 255, 0.1);
   color: #ccc;
 }
+
+.art-crm {
+  background: #0d1520;
+}
+
+.work-thumb.art-crm {
+  background: #0d1520;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-thumb.art-crm img,
+.pw-card .art-crm img,
+.pw-preview-img-wrap img[src*="vortex-crm"] {
+  object-fit: contain !important;
+}
