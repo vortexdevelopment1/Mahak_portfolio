@@ -49,6 +49,11 @@ export default function Hero() {
     updatePosition(e.clientX, e.clientY, e.currentTarget);
   };
 
+  const handlePointerMove = (e) => {
+    setIsHovered(true);
+    updatePosition(e.clientX, e.clientY, e.currentTarget);
+  };
+
   const handleTouchStart = (e) => {
     setIsHovered(true);
     if (e.touches && e.touches.length > 0) {
@@ -164,6 +169,12 @@ export default function Hero() {
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            onPointerEnter={(e) => {
+              setIsHovered(true);
+              updatePosition(e.clientX, e.clientY, e.currentTarget);
+            }}
+            onPointerMove={handlePointerMove}
+            onPointerLeave={() => setIsHovered(false)}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={() => setIsHovered(false)}
